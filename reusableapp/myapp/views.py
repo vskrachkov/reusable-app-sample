@@ -7,7 +7,7 @@ from myapp.seializers import AuthorSerializer, ArticleSerializer, \
 
 
 class AuthorViewSet(viewsets.ModelViewSet):
-    serializer_class = AuthorSerializer()
+    serializer_class = AuthorSerializer
     queryset = get_model('Author').objects.all()
     permission_classes = [AllowAny]
 
@@ -19,6 +19,6 @@ class ArticleViewSet(viewsets.ModelViewSet):
 
 
 class RootViewSet(viewsets.ModelViewSet):
-    serializer_class = RootModelSerializer()
+    serializer_class = RootModelSerializer
     queryset = RootModel.objects.all()
     permission_classes = [AllowAny]
